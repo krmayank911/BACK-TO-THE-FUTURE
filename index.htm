@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sun, 28 Feb 2016 07:00:37 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Back to the future!</title>
+	<link id="stylesheet" rel="stylesheet" type="text/css" href="css/future.css">
+	<!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body onload = "startTime()">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/backtothefuture.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="jquery.mousewheel.js"></script>
+  <!--make a background to hold the whole content-->
+    	   	<div id="sidebar">
+				<div id="sidebar_top">
+				 	  <ul>
+				 	  	  <li><img src="images/close-button.png" id="menuclose" onclick="slide_out()" alt="closemenu">
+					  	  <li><img src="images/logo2.png" alt="Back to the future">
+					  </ul>
+				</div>	 
+				 <!--<button onckick = "swapstylesheet('css/past.css')">Launch in past!</button>
+					-->
+				<div class="main_menu">
+					<div id="present">
+						<h><b>PRESENT TIME<b></h>
+							<table class="offset_adjust">
+								<tr>
+									<th>MONTH</th>
+									<th>DAY</th>
+									<th>YEAR</th>
+									<th><b></b></th>
+									<th>HOUR</th>
+									<th>MINUTE</th>
+									<th>SEC.</th>
+								</tr>
+								<tr>
+									<td id="pMonth"></td>
+									<td id="pDate"></td>
+									<td id="pYear"></td>
+									<td></td>
+									<td id="pHour"></td>
+									<td id="pMin"></td>
+									<td id="pSeconds"></td>
+								</tr>
+							</table>
+					</div>
+					<div id="LaunchTime">
+						<h>DESTINATION TIME</h>
+							<table class="offset_adjust">
+								<tr>
+									<th>MONTH</th>
+									<th class="adjust">DAY</th>
+									<th class="adjust">YEAR</th>
+									<th class="adjust">HOUR</th>
+									<th class="adjust">MINUTE</th>
+									<th class="adjust">SEC.</th>
+								</tr>
+								<tr>
+									<td>
+										<form>
+											<input type="text" value="3" style="font-family:digital-7;">
+										<form>
+									</td>
+									<td>
+										<form>
+											<input type="text" value="6" style="font-family:digital-7;">
+										<form>
+									</td>
+									<td>
+										<form>
+											<input type="text" value="1985" style="font-family:digital-7;">
+										<form>
+									</td>
+									<td>
+										<form>
+											<input type="text" value="21" style="font-family:digital-7;">
+										<form>
+									</td>
+									<td>
+										<form>
+											<input type="text" value="17" style="font-family:digital-7;">
+										<form>
+									</td>
+									<td>
+										<form>
+											<input type="text" value="10" style="font-family:digital-7;">
+										<form>
+									</td>
+								</tr>
+							</table>
+						</div>
+					<div id="launch">
+						<h onclick = "swapstylesheet()">Launch!</h>
+					</div>
+				</div>
+		
+	   		<!--make a left or right hand side bar that slides in from the left/right side 
+  			that contains: The present Date and Time
+				 		 : The launch Date and Time
+						 : A Launch Button(That changes the UI)-->
+			</div>
+			<div id="menu">
+				<img src="images/flux.png" id="menuicon" onclick="slide_in()" alt="Time Travel">
+			</div>  
+			<div id="background">
+			<div id="overlay"></div>
+			  <ul>
+			    <li>
+				 <div class="topbar">
+					<!--make a top bar containing the logo-"Back To The Future"-->
+					<div id="logo">
+						<img  src="images/logo2.png">
+					</div>
+				 </div>
+				</li>
+				<li>
+				 <div class="body2">
+				<!-------------------------------------------------------------------------------------------------------------->
+				<!--make a body to show the content The storyline(using background images,videos and graphics)and a next button-->
+					<div id="page-wrap">
+						  <div class="slider">
+    					  	   <ul style="width: 1600px; left:0%;">
+      						   	   <li><img src="sliderimage/seen1.png"></li>
+								   <li><img src="sliderimage/seen2.png"></li>
+								   <li><img src="sliderimage/seen3.png"></li>
+      							   <li><img src="sliderimage/seen4.jpg"></li>
+								   <li><img src="sliderimage/seen5.png"></li>
+      							   <li><img src="sliderimage/seen6.jpg"></li>
+      							   <li><img src="sliderimage/seen7.png"></li>
+								   <li><img src="sliderimage/seen8.png"></li>
+								   <li><img src="sliderimage/seen9.png"></li>
+								   <li><img src="sliderimage/seen10.png"></li>
+								   <li><img src="sliderimage/seen11.jpg"></li>
+								   <li><img src="sliderimage/seen12.png"></li>								   
+    						   </ul>
+  						  </div>
+						  <div id="arrow">
+    					  	   <ul>
+      					  	   	   <li1><a href="javascript:sliders[0].goToPrev()"><img src="images/arrow_left.png"></a></li1>
+      					  		   <li2><a href="javascript:sliders[0].goToNext()"><img src="images/arrow_right.png"></a></li2>
+    					  	   </ul>
+    					  </div>
+						  <script>
+    					  var sliders = []
+    					  	  $('.slider').each(function() {
+      					  	  sliders.push(new Slider(this))
+    					  	  })
+  						  </script>
+					</div>
+				</div>
+				</li>
+				<li>	
+					<!-------------------------------------------------------------------------------------------------------------->
+					<!--make a footer at the end-->
+				<div class="footer">
+					<table>
+						<tr>
+							<td>
+								<ul class="communities">
+									<li4><b>Communities</b>
+									<li4><a href="#">LYON ESTATES</a>
+									<li4><a href="#">THE CLOCK TOWER</a>
+									<li5><a href="#">DR. E BROWN</a>
+								</ul>
+							</td>
+							<td>	   
+								<ul class="usefullinks">
+									<li5><b>Useful Links</b>
+									<li5><a href="#">Help</a>
+									<li5><a href="#">Contact Us</a>
+								</ul>
+							</td>
+							<td class="social" style="width:600px;">
+								<ul>
+									<li6><b>Follow us on:</li6>
+								</ul>
+								<ul>
+									<li7><a href="#"><img src="images/insta.png" alt="inata"></a></li7>
+									<li7><a href="#"><img src="images/twitter.png" alt="tweet"></a></li7>
+									<li7><a href="#"><img src="images/fb.png" alt="fb"></a></li7>
+								</ul>	 
+							</td>
+						</tr>		
+					</table>
+			    </div>
+				</li>
+			</ul>	
+		</div>
+  </body>
+</html>
